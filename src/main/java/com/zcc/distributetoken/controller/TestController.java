@@ -1,14 +1,14 @@
 package com.zcc.distributetoken.controller;
 
 import cn.hutool.core.util.IdUtil;
-import com.zcc.distributetoken.anootation.NeedLogin;
+import com.zcc.distributetoken.annotation.NeedLogin;
 import com.zcc.distributetoken.constants.Constant;
 import com.zcc.distributetoken.result.Result;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 public class TestController {
-    @Autowired
+    @Resource
     private RedisTemplate<Object, Object> redisTemplate;
 
     @RequestMapping("login")

@@ -28,7 +28,7 @@ public class VerificationAspect {
     @Autowired
     private RedisTemplate<Object, Object> redisTemplate;
 
-    @Pointcut("@annotation(com.zcc.distributetoken.anootation.NeedLogin)")
+    @Pointcut("@annotation(com.zcc.distributetoken.annotation.NeedLogin)")
     public void verification() {}
 
     @Around("verification()")

@@ -1,4 +1,4 @@
-package com.zcc.distributetoken.anootation;
+package com.zcc.distributetoken.annotation;
 
 
 import java.lang.annotation.ElementType;
